@@ -60,8 +60,9 @@ results = [white, white, white, white, white]
 
 
 #### Mögliche Verbesserungen
- - Eigene Liste mit Lösungswörtern
- - Man kann nur 5 mal raten
- - Buchstabe in die Kästchen reinschreiben
- - Am Schluss wird noch einmal der Spielverlauf angezeigt
- - Man kann das gleiche Wort nur einmal pro Spiel eingeben
+ - Eigene Liste mit Lösungswörtern.
+ - Man soll nur 5 mal raten können.
+ - Buchstabe in die Kästchen reinschreiben.
+ - Am Schluss wird noch einmal der Spielverlauf angezeigt.
+ - Man kann das gleiche Wort nur einmal pro Spiel eingeben.
+ - Die Liste mit den schon verwendeten Buchstaben anzeigen.
