@@ -36,9 +36,9 @@ Zuerst müssen wir die Bibliothek `colorama` installieren. Wähle dazu in Thonny
 
 Nun kann man farbigen Text ausgeben:
 ```py
-from colorama import Front, Back, Style
+from colorama import Fore, Back, Style
 
-print(f"{Front.BLUE}{Back.YELLOW}Hello!{Style.RESET_ALL}")
+print(f"{Fore.BLUE}{Back.YELLOW}Hello!{Style.RESET_ALL}")
 ```
 
 4. Grosser Game-Loop
