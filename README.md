@@ -1,9 +1,7 @@
 # Auftrag Wordle
 
 
-In dieser Übung wollen wir das Wordle-Ratespiel programmieren:
-
-https://www.nytimes.com/games/wordle/index.html
+Wir programmieren das Wordle-Ratespiel neu. Das original Spiel findet man bei der [New York Times](https://www.nytimes.com/games/wordle/index.html). Es gibt auch eine [deutsche Version mit Umlauten](https://wordle.ruinelli.ch/).
 
 ## Nötige Schritte für die Basisversion
 
@@ -83,13 +81,11 @@ Im original Spiel wird am Schluss eine Zusammenfassung angezeigt, wo neben der A
     ⬜🟩🟩⬜🟨
     🟩🟩🟩🟩🟩
 
-J. Smith-Cameron auf Twitter[^1]
+[J. Smith-Cameron auf Twitter](https://twitter.com/j_smithcameron/status/1483460318269431814)
 
 Dadurch, dass viele Leute angefangen haben diese Zusammenfassung ihres täglichen Wordle-Rätsels auf den sozialen Medien zu teilen, wurde das Spiel erst so richtig populär.
 
 Gebe am Schluss noch einmal eine Zusammenfassung des Spiels aus, bei welcher jedoch das Lösungswort nicht ersichtlich ist.
-
- [^1] https://twitter.com/j_smithcameron/status/1483460318269431814
 
 
 ### Separate Liste mit Lösungswörter (optional)
