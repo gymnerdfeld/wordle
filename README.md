@@ -49,11 +49,11 @@ In einem zweiten Schritt kann dann überprüft werden, ob die Lösung schon gefu
 
 _Tipp:_ Die farbigen Kästchen vordefinieren und die Ausgabe (Kästchen) per default auf weiss setzen:
 ```py
-white = f"{Back.WHITE} {Style.RESET_ALL}"
-yellow = f"{Back.YELLOW} {Style.RESET_ALL}"
-green = f"{Back.GREEN} {Style.RESET_ALL}"
+WHITE = f"{Back.WHITE} {Style.RESET_ALL}"
+YELLOW = f"{Back.YELLOW} {Style.RESET_ALL}"
+GREEN = f"{Back.GREEN} {Style.RESET_ALL}"
 
-results = [white, white, white, white, white]
+results = [WHITE, WHITE, WHITE, WHITE, WHITE]
 ...
 ```
 
