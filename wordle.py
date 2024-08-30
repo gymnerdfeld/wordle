@@ -13,7 +13,7 @@ with open("wordlist.txt", encoding="utf-8") as f:
 
 word = random.choice(words)
 
-print("Willkommen bei Wordle. Errate das gesuchte Wort.")
+print("gib mau es wort i und versuech z richtigä z erratä")
 
 guess_number = 0
 
@@ -25,9 +25,9 @@ while not done:
         guess = input("> ").strip().upper()
 
         if len(guess) != 5:
-            print("Das Wort muss fünf Buchstaben lang sein.")
+            print("Es muäs 5 buächstabä lang si :(")
         elif guess not in words:
-            print(f"'{guess}' ist kein korrektes deutsches Wort.")
+            print(f"'{guess}' isch kes dütsches Wort :(")
         else:
             guess_number += 1
             print("  ", end="")
@@ -50,5 +50,5 @@ while not done:
             print("".join(results))
 
             if guess == word:
-                print(f"Du hast das Wort gefunden!")
+                print(f"Du hesches gfungä!!")
                 done = True
