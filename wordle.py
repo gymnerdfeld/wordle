@@ -50,5 +50,5 @@ while not done:
             print("".join(results))
 
             if guess == word:
-                print(f"Du hast das Wort gefunden!")
+                print(f"Du hast das Wort gefunden! Das war doch einfach.")
                 done = True
