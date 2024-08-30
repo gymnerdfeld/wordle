@@ -15,33 +15,40 @@ word = random.choice(words)
 
 print("Willkommen bei Wordle. Errate das gesuchte Wort.")
 
+guess_number = 0
+
 done = False
-while not done:    
-    guess = input("> ").strip().upper()
-    if len(guess) != 5:
-        print("Das Wort muss fünf Buchstaben lang sein.")
-    elif guess not in words:
-        print(f"'{guess}' ist kein korrektes deutsches Wort.")
+while not done:
+    if guess_number > 5:
+        done = True
     else:
-        print("  ", end="")
-        
-        characters = list(word)
-        results = [W, W, W, W, W]   # Default: Alles falsch! (weiss)
+        guess = input("> ").strip().upper()
 
-        for i in range(5):          # Korrekt gesetzte Buchstaben (grün)
-            c = guess[i]
-            if c == word[i]:
-                results[i] = G
-                characters.remove(c)
+        if len(guess) != 5:
+            print("Das Wort muss fünf Buchstaben lang sein.")
+        elif guess not in words:
+            print(f"'{guess}' ist kein korrektes deutsches Wort.")
+        else:
+            guess_number += 1
+            print("  ", end="")
 
-        for i in range(5):          # Existierende aber falsch platzierte Buchstaben (gelb)
-            c = guess[i]
-            if results[i] != G and c in characters:
-                results[i] = Y
-                characters.remove(c)
+            characters = list(word)
+            results = [W, W, W, W, W]   # Default: Alles falsch! (weiss)
 
-        print("".join(results))
+            for i in range(5):          # Korrekt gesetzte Buchstaben (grün)
+                c = guess[i]
+                if c == word[i]:
+                    results[i] = G
+                    characters.remove(c)
 
-        if guess == word:
-            print(f"Du hast das Wort gefunden!")
-            done = True
+            for i in range(5):          # Existierende aber falsch platzierte Buchstaben (gelb)
+                c = guess[i]
+                if results[i] != G and c in characters:
+                    results[i] = Y
+                    characters.remove(c)
+
+            print("".join(results))
+
+            if guess == word:
+                print(f"Du hast das Wort gefunden!")
+                done = True
