@@ -4,9 +4,9 @@ import random
 from colorama import Back, Style
 
 
-W = f"{Back.WHITE} {Style.RESET_ALL}"
-Y = f"{Back.YELLOW} {Style.RESET_ALL}"
-G = f"{Back.GREEN} {Style.RESET_ALL}"
+WHITE = f"{Back.WHITE} {Style.RESET_ALL}"
+YELLOW = f"{Back.YELLOW} {Style.RESET_ALL}"
+GREEN = f"{Back.GREEN} {Style.RESET_ALL}"
 
 with open("wordlist.txt", encoding="utf-8") as f:
     words = f.read().split()
@@ -33,19 +33,19 @@ while not done:
             print("  ", end="")
 
             characters = list(word)
-            results = [W, W, W, W, W]   # Default: Alles falsch! (weiss)
+            results = [WHITE, WHITE, WHITE, WHITE, WHITE]   # Default: Alles falsch! (weiss)
 
             for i in range(5):          # Korrekt gesetzte Buchstaben (grün)
-                c = guess[i]
-                if c == word[i]:
-                    results[i] = G
-                    characters.remove(c)
+                letter = guess[i]
+                if letter == word[i]:
+                    results[i] = GREEN
+                    characters.remove(letter)
 
             for i in range(5):          # Existierende aber falsch platzierte Buchstaben (gelb)
-                c = guess[i]
-                if results[i] != G and c in characters:
-                    results[i] = Y
-                    characters.remove(c)
+                letter = guess[i]
+                if results[i] != GREEN and letter in characters:
+                    results[i] = YELLOW
+                    characters.remove(letter)
 
             print("".join(results))
 
