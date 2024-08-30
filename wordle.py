@@ -50,5 +50,5 @@ while not done:
             print("".join(results))
 
             if guess == word:
-                print(f"Du hesches gfungä!!")
+                print(f"Du hesches gfungä!! Das isch doch eifach gsi.")
                 done = True
