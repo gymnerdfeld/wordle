@@ -4,16 +4,16 @@ import random
 from colorama import Back, Style
 
 
-W = f"{Back.WHITE} {Style.RESET_ALL}"
-Y = f"{Back.YELLOW} {Style.RESET_ALL}"
-G = f"{Back.GREEN} {Style.RESET_ALL}"
+WHITE = f"{Back.WHITE} {Style.RESET_ALL}"
+YELLOW = f"{Back.YELLOW} {Style.RESET_ALL}"
+GREEN = f"{Back.GREEN} {Style.RESET_ALL}"
 
 with open("wordlist.txt", encoding="utf-8") as f:
     words = f.read().split()
 
 word = random.choice(words)
 
-print("Willkommen bei Wordle. Errate das gesuchte Wort.")
+print("gib mau es wort i und versuech z richtigä z erratä")
 
 guess_number = 0
 
@@ -25,30 +25,30 @@ while not done:
         guess = input("> ").strip().upper()
 
         if len(guess) != 5:
-            print("Das Wort muss fünf Buchstaben lang sein.")
+            print("Es muäs 5 buächstabä lang si :(")
         elif guess not in words:
-            print(f"'{guess}' ist kein korrektes deutsches Wort.")
+            print(f"'{guess}' isch kes dütsches Wort :(")
         else:
             guess_number += 1
             print("  ", end="")
 
             characters = list(word)
-            results = [W, W, W, W, W]   # Default: Alles falsch! (weiss)
+            results = [WHITE, WHITE, WHITE, WHITE, WHITE]   # Default: Alles falsch! (weiss)
 
             for i in range(5):          # Korrekt gesetzte Buchstaben (grün)
-                c = guess[i]
-                if c == word[i]:
-                    results[i] = G
-                    characters.remove(c)
+                letter = guess[i]
+                if letter == word[i]:
+                    results[i] = GREEN
+                    characters.remove(letter)
 
             for i in range(5):          # Existierende aber falsch platzierte Buchstaben (gelb)
-                c = guess[i]
-                if results[i] != G and c in characters:
-                    results[i] = Y
-                    characters.remove(c)
+                letter = guess[i]
+                if results[i] != GREEN and letter in characters:
+                    results[i] = YELLOW
+                    characters.remove(letter)
 
             print("".join(results))
 
             if guess == word:
-                print(f"Du hast das Wort gefunden! Das war doch einfach.")
+                print(f"Du hesches gfungä!! Das isch doch eifach gsi.")
                 done = True
